@@ -19,7 +19,7 @@ export default function About() {
           {/* Story */}
           <div className="bg-white rounded-2xl p-8 border border-gray-100">
             <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-2xl mb-5">🐾</div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3">Why We Started..</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3">Why We Started </h2>
             <div className="h-px bg-gray-100 mb-5" />
             <div className="space-y-4 text-gray-500 text-sm font-light leading-relaxed">
               <p>
