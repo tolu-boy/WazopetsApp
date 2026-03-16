@@ -3,7 +3,6 @@
 import * as React from "react";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "@/lib/convex-api";
-
 import {
   Dialog,
   DialogContent,
@@ -21,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import type { Id } from "@wazo/convex-api/dataModel";
 
 type Props = {
   open: boolean;
@@ -30,9 +30,7 @@ type Props = {
 export function CreateProductModal({ open, onOpenChange }: Props) {
   const [loading, setLoading] = React.useState(false);
   const [files, setFiles] = React.useState<File[]>([]);
-
   const categories = useQuery(api.functions.categories.getCategories, {});
-
   const [form, setForm] = React.useState({
     name: "",
     description: "",
@@ -61,7 +59,7 @@ export function CreateProductModal({ open, onOpenChange }: Props) {
     setLoading(true);
     try {
       // 1️⃣ Upload all files
-      const storageIds: string[] = [];
+      const storageIds: Id<"_storage">[] = [];
   
       for (const file of files) {
         const uploadUrl = await generateUploadUrl();
