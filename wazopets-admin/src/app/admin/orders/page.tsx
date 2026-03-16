@@ -170,6 +170,7 @@ import * as React from "react";
 import Image from "next/image";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "@/lib/convex-api";
+import type { Id } from "@wazo/convex-api/dataModel";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -205,7 +206,7 @@ interface OrderItem {
 }
 
 interface Order {
-  _id: string;
+  _id: Id<"orders">;
   userId: string;
   items: OrderItem[];
   totalAmount: number;

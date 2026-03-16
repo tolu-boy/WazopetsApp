@@ -12,7 +12,9 @@
     "deploy:backend": "pnpm -C packages/convex-backend deploy",
     "convex:codegen": "pnpm -C packages/convex-backend codegen",
     "gen-api": "pnpm -C wazopets gen-api",
-    "gen-api-admin": "pnpm -C wazopets gen-api-admin"
+    "gen-api-admin": "pnpm -C wazopets gen-api-admin",
+    "build:admin": "pnpm -C wazopets-admin build"
+
   }
 }
 
