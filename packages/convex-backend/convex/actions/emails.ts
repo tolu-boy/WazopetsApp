@@ -187,7 +187,7 @@ export const sendEmail = internalAction({
         html: fullHtml,
         category: "Order Confirmation",
       });
-      console.log("Modern Email sent successfully!");
+      console.log("Modern Email sent successfully!!");
     } catch (error) {
       console.error("Mailtrap error:", error);
     }
