@@ -54,7 +54,7 @@ function stringOrUndefined(value: string) {
 }
 
 export default function Page() {
-  const products = useQuery(api.functions.products.getAllProducts, {});
+  const products = useQuery(api.functions.products.getProductsInStock, {});
   const categories = useQuery(api.functions.categories.getCategories, {});
   const updateProduct = useMutation(api.functions.products.update);
   const deleteProduct = useMutation(api.functions.products.deleteProduct);
