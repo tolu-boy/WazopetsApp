@@ -1,0 +1,28 @@
+{
+  "name": "@wazo/convex-api",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {
+    "@wazo/convex-backend": "workspace:*"
+  },
+  "peerDependencies": {
+    "convex": "*"
+  },
+  "exports": {
+    "./api": {
+      "types": "./api.d.ts",
+      "default": "./api.js"
+    },
+    "./dataModel": {
+      "types": "./dataModel.d.ts",
+      "default": "./dataModel.d.ts"
+    },
+    "./server": {
+      "types": "./server.d.ts",
+      "default": "./server.js"
+    }
+  }
+}
+
