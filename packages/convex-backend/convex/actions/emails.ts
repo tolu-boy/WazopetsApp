@@ -21,7 +21,7 @@ export const sendEmail = internalAction({
   handler: async (ctx, args) => {
     const client = new MailtrapClient({
       token: process.env.MAILTRAP_TOKEN!,
-      // sandbox:true,
+      // sandbox: true,
       // testInboxId: 4204813, // Remove this line if using Production/Real sending
     });
 
@@ -139,6 +139,11 @@ export const sendEmail = internalAction({
                   ${itemsHtml}
                 </table>
 
+                  <!-- Delivery Info -->
+    <p style="font-size: 14px; color: #111827; margin-top: 16px;">
+      Delivery takes between 3 to 5 working days
+    </p>
+
                 <!-- Action Button -->
                 <div class="btn-container">
                   <a href="https://www.wazopets.com/orders" class="btn">Track your Order</a>
@@ -168,7 +173,8 @@ export const sendEmail = internalAction({
 
           <!-- Footer -->
           <div class="footer">
-            <p>WazoPets Nigeria • Lagos & Abuja</p>
+           
+            <p>WazoPets Nigeria • Lagos</p>
           </div>
           <br>
         </div>
