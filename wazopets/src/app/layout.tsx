@@ -12,6 +12,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { useCartSync } from "@/store/useCartSync";
 import { CartSyncClient } from "@/components/CartSyncClient";
 import CloudCartMirrorClient from "@/components/CloudCartMirrorClient";
+import { Analytics } from '@vercel/analytics/next';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -86,6 +87,7 @@ export default function RootLayout({
             <Toaster />
           </ConvexClientProvider>
         </ClerkProvider>
+        <Analytics />
       </body>
     </html>
 
